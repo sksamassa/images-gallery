@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image gallery</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+ <!-- Global container -->
+<div class="flex min-h-screen items-center justify-center bg-slate-100">
+  <!-- Main container -->
+  <div class="m-3 min-h-screen rounded-xl bg-white px-6 py-2 shadow-2xl">
+    <!-- Flex container -->
+    <div class="flex flex-col space-y-4">
+      <!-- Top navbar -->
+      <div class="text-normal my-4 flex flex-col items-center justify-center space-y-4 font-normal md:my-32 md:flex-row md:justify-end md:space-x-4 md:space-y-0">
+        <a href="#" class="py-1 duration-200 hover:border-b-2 hover:border-black">Vector</a>
+        <a href="#" class="duration-20 py-1 hover:border-b-2 hover:border-black">Illustrations</a>
+        <a href="#" class="duration-20 py-1 hover:border-b-2 hover:border-black">Images</a>
+        <a href="#" class="duration-20 py-1 hover:border-b-2 hover:border-black">Icons</a>
+      </div>
+      <!-- Search, Upload container -->
+      <div class="flex flex-col items-center justify-center space-y-2 md:flex-row md:justify-between md:space-x-2 md:space-y-0">
+        <!-- Search container -->
+        <div class="flex flex-row items-center justify-between space-x-5 border-b border-b-slate-300 bg-white px-4 py-2 text-slate-300 md:self-start w-full md:w-2/5">
+          <input type="text" class="px-5 py-2 focus:outline-none" placeholder="Search" />
+          <button class="min-w-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+            </svg>
+          </button>
+        </div>
+        <!-- Upload button -->
+        <button class="text-normal min-w-full rounded-md bg-black py-3 font-normal text-white md:min-w-min md:self-end md:px-6">Upload</button>
+      </div>
+
+      <!-- Images container -->
+      <div class="grid grid-cols-1 items-center justify-center gap-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
+        <!-- Image Container -->
+        <div class="group relative">
+          <img src="https://avatars.mds.yandex.net/i?id=1cf0191389dcc0bb02a304df4a32f3a1ffb19c77-12473751-images-thumbs&n=13" alt=""
+          >
+          <!-- Popup(on hover over) -->
+          <div class="absolute bottom-0 right-0 left-0 bg-black text-white opacity-0 group-hover:opacity-100 group-hover:bg-opacity-35">
+            <div class="flex justify-between items-center p-4 px-2">
+              <div class="">
+                <div class="text-normal font-semibold">Abstract Painting</div>
+              <div class="text-xs font-normal">245 likes - 35 Shares</div>
+              </div>
+              <div class="">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+</svg>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
